@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>myestore</display-name>
+
+	<filter>
+		<filter-name>GenericEncodingFilter</filter-name>
+		<filter-class>com.guxiang.web.filter.GenericEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GenericEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>PrivilegeFilter</filter-name>
+		<filter-class>com.guxiang.web.filter.PrivilegeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PrivilegeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>AutoLoginFilter</filter-name>
+		<filter-class>com.guxiang.web.filter.AutoLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AutoLoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>CheckImageServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.CheckImageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RegistServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.RegistServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>PayServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.PayServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CallbackServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.CallbackServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>AddProductServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.AddProductServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ListProductsServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.ListProductsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Add2CartServlet</servlet-name>
+		<servlet-class>com.guxiang.web.servlet.Add2CartServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCartServlet</servlet-name>
+    <servlet-class>com.guxiang.web.servlet.UpdateCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GenerateOrderServlet</servlet-name>
+    <servlet-class>com.guxiang.web.servlet.GenerateOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListOrdersServlet</servlet-name>
+    <servlet-class>com.guxiang.web.servlet.ListOrdersServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>CheckImageServlet</servlet-name>
+		<url-pattern>/CheckImageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegistServlet</servlet-name>
+		<url-pattern>/RegistServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddProductServlet</servlet-name>
+		<url-pattern>/AddProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListProductsServlet</servlet-name>
+		<url-pattern>/ListProductsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Add2CartServlet</servlet-name>
+		<url-pattern>/Add2CartServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCartServlet</servlet-name>
+    <url-pattern>/UpdateCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GenerateOrderServlet</servlet-name>
+    <url-pattern>/GenerateOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListOrdersServlet</servlet-name>
+    <url-pattern>/ListOrdersServlet</url-pattern>
+  </servlet-mapping>
+  	<servlet-mapping>
+		<servlet-name>PayServlet</servlet-name>
+		<url-pattern>/PayServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CallbackServlet</servlet-name>
+		<url-pattern>/CallbackServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

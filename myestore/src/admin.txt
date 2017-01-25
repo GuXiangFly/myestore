@@ -1,0 +1,3 @@
+/addproduct.jsp
+/AddproductServlet
+/LogoutServlet
