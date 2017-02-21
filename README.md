@@ -9,8 +9,10 @@
 ---
 ###所用到的技术简介：  
 >* Mysql
+>* Servlet/jsp
 >* javamail
 >* JDBC
+>* ngnix
 
 ###一些维护上说明
 >* 1 由于这个项目使用了顶级域名访问的方式，您可以将项目里面的 server.xml 文件复制进入 tomcat 里面的方式 进行配置 
